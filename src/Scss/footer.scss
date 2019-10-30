@@ -1,0 +1,31 @@
+Footer{
+    background-color: black;
+    color: white;
+    display: grid;
+    //  grid-auto-columns: repeat(auto, 1fr);
+    grid-template-rows: 0.75fr 1fr;
+    grid-template-columns: repeat(3, 20%);
+    grid-column-gap: 2%;
+    padding: 2% 3%;
+    color: white;
+    div{
+        border-right: 1px white solid;
+    }
+    ul{
+        li{
+            list-style: none;
+            a{
+                line-height: 1.5;
+                text-decoration: none;
+                color:white;
+            }
+
+        }
+    }
+h2{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+}

@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {fab} from '@fortawesome/free-brands-svg-icons'
+import {faBars} from '@fortawesome/free-solid-svg-icons'
+
+import Nav from './Containers/Nav';
+import Content from './Containers/Content';
+import FrameWorks from './Components/frameWorks';
+import Footer from './Containers/Footer';
+
+import './Scss/App.scss';
+
+library.add(fab, faBars)
 
 function App() {
+  let width = window.innerWidth;
+// || document.documentElement.clientWidth
+// || document.body.clientWidth;
+  
+console.log(width)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav />
+      <Content/>
+      <FrameWorks/>
+      <Footer/> 
+    </>
   );
 }
 
