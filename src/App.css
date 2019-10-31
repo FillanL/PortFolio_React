@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+#aboutMeH2{
+  padding-left: 0;
+}
 .content-container{
   background-color: blueviolet;;
 }

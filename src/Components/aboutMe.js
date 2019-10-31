@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function aboutMe() {
     return (
-        <div style={{width:"90%", margin:"0 auto", padding:"2%"}}>
-            <h2 style={{paddingBottom:"-2% 0"}}>
-                About Me
+        <div style={{width:"90vw", margin:"0 auto", padding:"2%"}}>
+            <h2 id="aboutMeH2" style={{paddingBottom:"-2% 0"}}>
+            {`//`} About Me
             </h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsa saepe maxime? Alias eos laborum libero, veniam, sequi doloribus possimus voluptatibus mollitia at perspiciatis illo, culpa accusamus nostrum velit harum!Lorem

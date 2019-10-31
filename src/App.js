@@ -5,7 +5,6 @@ import {faBars} from '@fortawesome/free-solid-svg-icons'
 
 import Nav from './Containers/Nav';
 import Content from './Containers/Content';
-import FrameWorks from './Components/frameWorks';
 import Footer from './Containers/Footer';
 
 import './Scss/App.scss';
@@ -22,7 +21,6 @@ console.log(width)
     <>
       <Nav />
       <Content/>
-      <FrameWorks/>
       <Footer/> 
     </>
   );
