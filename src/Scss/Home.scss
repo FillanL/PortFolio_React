@@ -1,10 +1,19 @@
+.mini-span{
+    border-radius: 30px;
+    margin: 20px auto;
+    height: 1px;
+    width: 30%;
+    // box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.788);
+    background-color: black;
+}
 .project-containter{
-        // height: 100%;
+    font-family: 'Montserrat', sans-serif;
+        height: auto;
         width: 95vw;
         margin: 0 auto;
         // padding: 2% 0;
         display: grid;
-        grid-gap: 1%;
+        grid-gap: 4%;
         grid-template-columns: repeat(auto-fill, 275px);
         // background-color: rgb(255, 214, 240);
         justify-content: space-around;

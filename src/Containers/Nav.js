@@ -6,7 +6,8 @@ import '../Scss/nav.scss'
 export default function Nav() {
 
     let hideBar = ()=>{
-        let navBarItem = document.querySelector('nav ul')
+        let navBarItem = document.querySelector('.main-nav ul')
+        console.log("clicked")
 
         if ( navBarItem.classList.contains('hidden')){
             navBarItem.classList.replace('hidden', 'show')
@@ -21,7 +22,7 @@ export default function Nav() {
     //     console.log("lllllLLLL")
     // }
     return (
-        <nav >
+        <nav className="main-nav">
             <div className='mobile-burger' onClick={()=> hideBar()}>
                 <FontAwesomeIcon icon={['fa', 'bars']} size="2x" />
             </div>
@@ -44,11 +45,11 @@ export default function Nav() {
                     Projects
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to='/resume'>
                         Resume
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <Link to='/contact'>
                         Contact

@@ -1,9 +1,12 @@
 .App {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 #aboutMeH2{
+  font-family: 'Montserrat', sans-serif;
   padding-left: 0;
 }
 .content-container{
-  background-color: blueviolet;;
+  font-family: 'Montserrat', sans-serif;
+  /* background-color: blueviolet;; */
 }

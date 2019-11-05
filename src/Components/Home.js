@@ -14,9 +14,10 @@ class Home extends Component {
 
                 <AboutMe/>
 
-                <h2 style={{paddingBottom:"2%"}}>
+                <h2 style={{padding:"1% 4%", fontFamily:"Montserrat, sans-serif"}}>
                 {`//`}  Latest Projects
                 </h2>
+                <div className="mini-span"></div>
                  <div className="project-containter"> 
                     {
                         projects.slice(0,4).map(p => 
@@ -34,6 +35,7 @@ class Home extends Component {
                         )
                     }
                  </div>
+                <div className="mini-span"></div>
                 <FrameWorks/>
             </div>
         )

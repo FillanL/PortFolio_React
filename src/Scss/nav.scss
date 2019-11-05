@@ -1,10 +1,13 @@
-nav{
+.main-nav{
+    font-family: 'Montserrat', sans-serif;
+    z-index: 99999;
     position: fixed;
     width: 100vw;
-    height: 2rem;
+    height: auto;
     background-color: rgb(255, 255, 255);
     margin: auto 0;
     overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(99, 99, 99, 0.788);
     .mobile-burger{
         
         position: absolute;
@@ -14,6 +17,7 @@ nav{
         width: 5%;
         margin-left: 1%;
         background-color: rgb(255, 255, 255);
+        cursor: pointer;
         svg{
             color: rgb(36, 36, 36);
         }
@@ -21,27 +25,33 @@ nav{
     .logo{
         margin: auto auto;
         width: 30%;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         text-align: center;
         height: 100%;
         background-color: crimson;
     }
     ul{
-        position: inherit;
+        position: relative;
+        margin: auto;
+        padding: 10px 0;
+        // position: inherit;
         text-align: center;
-        display: block;
-        width: 100vw;
+        // display: block;
+        width: 90vw;
         list-style: none;
-        background-color: rgba(235, 226, 227, 0.90);
+        background-color: rgba(255, 255, 255, 0.9);
+        height: auto;
         li{
+            // background-color: rgb(223, 195, 102);
             width: 100%;
             padding: 2px 0;
-            border: rgb(255, 255, 255) 1px solid;
+            border: rgb(2, 2, 2) 1px solid;
             margin-right: 15px;
             a{
                 text-decoration: none;
-                font-family: monospace;
-                font-size: 1.5rem;
+                // font-family: monospace;
+                font-weight: 500;
+                font-size: 1.15rem;
                 color: rgb(14, 14, 14);
                 &:hover{
                     color: rgb(47, 0, 255);
@@ -59,8 +69,8 @@ nav{
 }
 
 @media(min-width: 700px){
-    nav{
-        height: 2rem;
+    .main-nav{
+        height: auto;
         .mobile-burger{
             display: none;
         }
@@ -68,22 +78,16 @@ nav{
             display: none;
         }
         ul{
-            height: 2rem;
-           display: block;
-            // margin: 0;
-            // padding-left: -20px;
+            height: auto;
+            display: block;
             position: relative;
             top: 0%;
-            // line-height: 1;
+            padding: 10px;
             li{
                 border: none;
                 display: inline;
-                // a{
-                    // margin: auto auto;
-                // }
+               
             }
-            // display: none;
-            // display: inline;
         }
     }
 }
