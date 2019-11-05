@@ -27,10 +27,12 @@ export default function Nav() {
                 <FontAwesomeIcon icon={['fa', 'bars']} size="2x" />
             </div>
                 <div className='logo'>
-                   
-
-                Fillan's Portfolio
-                    
+                {'//'} Fillan
+                </div>
+                <div className="welcome">
+                    <h2>
+                {'//'} Fillan L.
+                    </h2>
                 </div>
             <ul 
             // className="hidden"

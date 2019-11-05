@@ -3,7 +3,7 @@ import React from 'react'
 export default function aboutMe() {
     return (
         <div className="">
-            <h2 id="aboutMeH2" style={{fontFamily:"Montserrat, sans-serif"}}>
+            <h2 id="aboutMeH2" style={{fontFamily:"Montserrat, sans-serif", color:"rgb(124, 144, 160)"}}>
             {`//`} About Me
             </h2>
             <p style={{padding:"0 5%",lineHeight:"1.5", fontSize:"1.1rem", fontFamily:"Montserrat, sans-serif"}}>

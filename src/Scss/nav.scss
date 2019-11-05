@@ -22,13 +22,18 @@
             color: rgb(36, 36, 36);
         }
     }
+    .welcome{
+        display: none;
+    }
     .logo{
+        font-family: 'Montserrat', sans-serif;
         margin: auto auto;
         width: 30%;
         font-size: 1.5rem;
         text-align: center;
         height: 100%;
-        background-color: crimson;
+        color: rgb(124, 144, 160);
+        // background-color: crimson;
     }
     ul{
         position: relative;
@@ -45,7 +50,7 @@
             // background-color: rgb(223, 195, 102);
             width: 100%;
             padding: 2px 0;
-            border: rgb(2, 2, 2) 1px solid;
+            border-top: rgb(177, 177, 177) 1px solid;
             margin-right: 15px;
             a{
                 text-decoration: none;
@@ -54,7 +59,7 @@
                 font-size: 1.15rem;
                 color: rgb(14, 14, 14);
                 &:hover{
-                    color: rgb(47, 0, 255);
+                    color: rgb(124, 144, 160);
                 }
             }
 
@@ -70,14 +75,28 @@
 
 @media(min-width: 700px){
     .main-nav{
+        display: grid;
         height: auto;
+        grid-template-columns: 20% 20% 60%;
         .mobile-burger{
             display: none;
         }
         .logo{
             display: none;
         }
+        .welcome{
+            font-weight: 500;
+            width: auto;
+            // color: rgb(4, 63, 173);
+            color: rgb(124, 144, 160);
+            // text-align: center;
+            padding:0 15%;
+            display: block;
+        }
         ul{
+            width: 100%;
+            grid-column-start: 3;
+            grid-column-end: 4;
             height: auto;
             display: block;
             position: relative;

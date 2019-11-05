@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import AboutMe from './aboutMe'
 import FrameWorks from './frameWorks';
+import Banner from './banner'
 
 import '../Scss/Home.scss'
 
@@ -12,9 +13,10 @@ class Home extends Component {
         return (
             <div className="">
 
+                <Banner/>
                 <AboutMe/>
 
-                <h2 style={{padding:"1% 4%", fontFamily:"Montserrat, sans-serif"}}>
+                <h2 style={{padding:"1% 4%", fontFamily:"Montserrat, sans-serif", color:"rgb(124, 144, 160)"}}>
                 {`//`}  Latest Projects
                 </h2>
                 <div className="mini-span"></div>
