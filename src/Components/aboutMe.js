@@ -7,8 +7,7 @@ export default function aboutMe() {
             {`//`} About Me
             </h2>
             <p style={{padding:"0 5%",lineHeight:"1.5", fontSize:"1.1rem", fontFamily:"Montserrat, sans-serif"}}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsa saepe maxime? Alias eos laborum libero, veniam, sequi doloribus possimus voluptatibus mollitia at perspiciatis illo, culpa accusamus nostrum velit harum!Lorem
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis eligendi recusandae ipsum! Quibusdam, itaque deserunt nisi praesentium, consequuntur ipsam nemo corrupti unde laboriosam earum voluptatibus nihil aspernatur. Ipsa aliquam necessitatibus iste vitae cupiditate similique autem commodi, placeat fuga sit.
+            Full stack web developer with a background in accounting and finance. With experience in Ruby on Rails, JavaScript, and ReactJS, as well as my experience in tax preparation, I am looking to combine my current passion of web development and start a career in FinTech and/or customer satisfaction. Along with my professional finance and web development skills, I also bring leadership, accountability and enjoy promoting health and wellness. 
             </p>
         </div>
     )

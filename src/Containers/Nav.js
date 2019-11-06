@@ -18,9 +18,7 @@ export default function Nav() {
        
     }
 
-    // let tryThis = () => {
-    //     console.log("lllllLLLL")
-    // }
+    
     return (
         <nav className="main-nav">
             <div className='mobile-burger' onClick={()=> hideBar()}>

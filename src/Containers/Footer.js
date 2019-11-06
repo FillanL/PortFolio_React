@@ -7,7 +7,7 @@ export default class Footer extends Component {
         return (
             <footer>
                 <h2 className="Logo">
-                    LOGO
+                    FILLAN L.
                 </h2>
                 <div>
                     <ul>
@@ -19,11 +19,6 @@ export default class Footer extends Component {
                         <li>
                             <Link to="/projects">
                                 Projects
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/">
-                                Resume
                             </Link>
                         </li>
                         <li>
@@ -58,7 +53,7 @@ export default class Footer extends Component {
                         </li>
                     </ul>
                 </div>
-                <div>
+                {/* <div>
                     <ul>
                         <li>
                             <Link to="/">
@@ -81,7 +76,7 @@ export default class Footer extends Component {
                             </Link>
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </footer>
         )
     }
