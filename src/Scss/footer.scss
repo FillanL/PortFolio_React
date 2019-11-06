@@ -7,7 +7,6 @@ footer{
     display: grid;
     grid-template-rows:  1fr;
     grid-template-columns:  1fr;
-    // grid-gap: 2%;
     padding: 2% 3%;
     color: white;
     div{
@@ -25,15 +24,8 @@ footer{
                 text-decoration: none;
                 color:white;
             }
-
         }
     }
-h2{
-    // grid-row-start: 1;
-    // grid-row-end: 2;
-    // grid-column-start: 1;
-    // grid-column-end: 5;
-}
 }
 
 @media(min-width: 700px){

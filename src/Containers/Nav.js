@@ -23,13 +23,13 @@ export default function Nav() {
         <nav className="main-nav">
             <div className='mobile-burger' onClick={()=> hideBar()}>
                 <FontAwesomeIcon icon={['fa', 'bars']} size="2x" />
-            </div>
                 <div className='logo'>
                 {'//'} Fillan
                 </div>
+            </div>
                 <div className="welcome">
                     <h2>
-                {'//'} Fillan L.
+                {'//'} Fillan
                     </h2>
                 </div>
             <ul 

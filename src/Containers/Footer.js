@@ -7,7 +7,7 @@ export default class Footer extends Component {
         return (
             <footer>
                 <h2 className="Logo">
-                    FILLAN L.
+                    Fillan L.
                 </h2>
                 <div>
                     <ul>
