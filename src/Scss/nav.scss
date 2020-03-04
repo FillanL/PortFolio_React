@@ -11,12 +11,11 @@
     .mobile-burger{
         display: grid;
         grid-template-columns: 5% 95%;
+        grid-template-rows: 1fr;
         position: relative;
-        // position: absolute;
         padding: 1%;
         height: 100%;
         top: -10%;
-        // width: 5%;
         margin-left: 1%;
         background-color: rgb(255, 255, 255);
         cursor: pointer;
@@ -35,15 +34,12 @@
         text-align: center;
         height: 100%;
         color: rgb(124, 144, 160);
-        // background-color: crimson;
     }
     ul{
         position: relative;
         margin: auto;
         padding: 10px 0;
-        // position: inherit;
         text-align: center;
-        // display: block;
         width: 90vw;
         list-style: none;
         background-color: rgba(255, 255, 255, 0.9);
@@ -79,7 +75,7 @@
     .main-nav{
         display: grid;
         height: auto;
-        grid-template-columns: 20% 20% 60%;
+        grid-template-columns: 25% 15% 60%;
         .mobile-burger{
             display: none;
         }

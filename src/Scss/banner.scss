@@ -17,9 +17,6 @@
         margin: auto;
         object-fit: cover;
         border: 5px rgb(101, 117, 131) solid
-        img{
-
-        }
     }
     .user-media{
         // position: relative;
@@ -34,6 +31,7 @@
     .banner{
         display: grid;
         grid-template-columns: 40% 60%;
+        grid-template-rows: 1fr;
         position: relative;
         width: 100vw;
         height: 210px;
