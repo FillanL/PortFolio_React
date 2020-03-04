@@ -10,13 +10,16 @@
     box-shadow: 2px 2px 8px rgba(99, 99, 99, 0.788);
 
     .profile-pic{
-        // position: relative;
+        position: relative;
         border-radius: 100%;
-        // height: 90%;
+        height: 90%;
         width: 210px;
         margin: auto;
         object-fit: cover;
         border: 5px rgb(101, 117, 131) solid
+        img{
+
+        }
     }
     .user-media{
         // position: relative;
