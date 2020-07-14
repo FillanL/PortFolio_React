@@ -9,6 +9,12 @@ footer{
     grid-template-columns:  1fr;
     padding: 2% 3%;
     color: white;
+    #scrollIconContainer{
+        text-align: right;
+        color: rgb(138, 138, 138);
+        height: 30px;
+        margin-top: -60px;
+    }
     div{
         padding: 10px;
         position: relative;

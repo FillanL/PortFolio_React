@@ -8,7 +8,7 @@ export default function banner() {
     return (
         <div className="banner">
             
-            <img className="profile-pic" srcSet="https://images.unsplash.com/photo-1438109491414-7198515b166b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9" alt=""/>
+            <img className="profile-pic" srcSet="https://media-exp1.licdn.com/dms/image/C4E03AQGxDqFdWsIcdA/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=wk-npNQwBpPz3GvTXf5-bP4jeHRABjnCQKPVbVzB8To" alt=""/>
             <div className="user-media">
                 <p style={{fontSize:"1.5rem",fontFamily:"Montserrat, sans-serif"}}>
                     Fillan Lee
@@ -31,7 +31,7 @@ export default function banner() {
                     <a style={{color:"rgb(0,0,0)"}} href="https://github.com/fillanl">
                         <FontAwesomeIcon style={{marginRight:"15px"}} icon={['fab', 'github']} size="2x" />
                     </a>
-                    <a style={{color:"rgb(0,0,0)"}} href="https://medium.com">
+                    <a style={{color:"rgb(0,0,0)"}} href="https://medium.com/@minimalsyntax">
                         <FontAwesomeIcon style={{marginRight:"15px"}} icon={['fab', 'medium']} size="2x" />
                     </a>
 

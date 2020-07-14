@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretSquareUp } from "@fortawesome/free-solid-svg-icons";
+
 
 import '../Scss/footer.scss'
 export default class Footer extends Component {
@@ -52,6 +55,13 @@ export default class Footer extends Component {
                             </Link>
                         </li>
                     </ul>
+                </div>
+                <div id="scrollIconContainer">
+                    <FontAwesomeIcon 
+                        icon={faCaretSquareUp}
+                        size="3x"
+                        onClick={()=> window.scrollTo({top:0,left: 0,behavior:"smooth"})}
+                    />
                 </div>
                 {/* <div>
                     <ul>
