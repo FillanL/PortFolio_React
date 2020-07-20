@@ -1,4 +1,7 @@
 import React from 'react'
+import {vid} from '../Video/codeProcess1.mp4'
+import {vid1} from '../Video/codeProcess1.mp4'
+
 
 const VideoSection = () => {
     return (
@@ -9,7 +12,7 @@ const VideoSection = () => {
             <div class="videoSection" style={{backgroundColor: "rgba(124, 144, 160, 0.5)", boxSizing:"border-box"}}>
 
             <video id="video2" height="400px" autoplay playsinline>
-                        <source src={}
+                        <source src={`#`}
                         type="video/mp4"/>
                     </video>
             <div class="video-info">
@@ -25,14 +28,14 @@ const VideoSection = () => {
 
             <div class="mini-span" style={{backgroundColor: "rgba(124, 144, 160, 0.35)"}}></div>
 
-            
+
             <div class="videoSection">
                 <div class="video-info">
                     <h2 style={{backgroundColor: "rgba(124, 144, 160, 0.35);"}}>Designing with Color</h2>
                     <p style={{lineHeight: '2.1'}}>Using background color to propperly place each tag,makes it visually easier to see overlaps and when tags are not contained where it should be.</p>
                 </div>
                     <video id="video2" height="400px" autoplay playsinline>
-                        <source src={}
+                        <source src={`#`}
                         type="video/mp4"/>
                     </video>
             </div>
