@@ -5,7 +5,6 @@
     position: relative;
     width: 100vw;
     height: 350px;
-    // height: 295px;
     background: linear-gradient(0.20turn, rgb(124, 144, 160), #f8f8f8, rgb(124, 144, 160));
     box-shadow: 2px 2px 8px rgba(99, 99, 99, 0.788);
 
@@ -19,12 +18,9 @@
         border: 5px rgb(101, 117, 131) solid
     }
     .user-media{
-        // position: relative;
         height: 50%;
-        // width: auto;
         margin: 0 auto;
         line-height: 1.5;
-        // top: 50%;
     }
 }
 @media(min-width: 700px){

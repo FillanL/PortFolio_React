@@ -12,11 +12,11 @@ import './Scss/App.scss';
 library.add(fab, faBars)
 
 function App() {
-  let width = window.innerWidth;
+  // let width = window.innerWidth;
 // || document.documentElement.clientWidth
 // || document.body.clientWidth;
   
-console.log(width)
+// console.log(width)
   return (
     <>
       <Nav />

@@ -1,17 +1,21 @@
 .videoSection{
     display: flex;
-    padding: 20px;
+    padding: 15px;
     video{
-        width: 45%;
+        width: 49%;
+        // height: 400px;
     }
     .video-info{
-        width: 30%;
+        width: 35%;
         text-align: center;
         padding: 20px;
         margin: 0 auto;
     }
+    p{
+        line-height: 2.1;
+    }
 }
-@media(max-width: 700px){
+@media(max-width: 800px){
     .videoSection{
         display: grid;
         grid-template-columns: 100%;
