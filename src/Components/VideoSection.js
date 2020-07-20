@@ -3,7 +3,8 @@ import vid from '../Video/codeProcess1.mp4'
 import vid1 from '../Video/codeProcess2.mp4'
 import '../Scss/videoSection.scss'
 
-
+// to-do
+// remove in line styling to scss file
 const VideoSection = () => {
     return (
         <div>
