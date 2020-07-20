@@ -36,6 +36,7 @@ class Home extends Component {
                                     <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsa saepe maxime? Alias eos laborum libero, veniam, sequi doloribus possimus voluptatibus mollitia at perspiciatis illo, culpa accusamus nostrum velit harum! Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     </p>
+                                    <a href={} target="_blank" rel="noopener noreferrer">link</a>
                                 </div>
                             </div>
                         )
