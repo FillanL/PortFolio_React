@@ -14,4 +14,4 @@ export const ProjectList = [
     new Project("Blogz", "simple blog flatform that allows users to blog", "https://brave-shirley-4599a6.netlify.app/","#"),
     new Project("Minimal Logic", "Personal blog, using material ui and customer css to document coding tutorials and progress", "https://dazzling-villani-02b27c.netlify.app/","#" ,"MinimalLogicBlog.jpg"),
     new Project("Dating app", "full stack ruby on rails dating app, using bycrpt,Authorization and authentication", "https://www.youtube.com/watch?v=soBXXCh81BA"),
-    new Project("Tech Blog", "full stack react and node js appplication, using all custom css grind layout", "https://thirsty-gates-c0ec8f.netlify.app/","https://www.youtube.com/watch?v=HtBLL887Qag")]
+    new Project("Tech Blog", "full stack react and node js appplication, using all custom css grind layout", "https://thirsty-gates-c0ec8f.netlify.app/","https://www.youtube.com/watch?v=HtBLL887Qag","Tech Blog.jpg")]
