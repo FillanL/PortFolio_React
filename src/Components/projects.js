@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 import {ProjectList} from './staticPropjects'
-import '../Scss/projects.scss'
+// import '../Scss/projects.scss'
 
 // to-do
 // remove in line styling to scss file

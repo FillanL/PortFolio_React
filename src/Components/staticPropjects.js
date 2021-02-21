@@ -1,10 +1,15 @@
 class Project {
+    static #id = 0
     constructor(projectName, projectDescription, projectURL,youtube, projectImg ) {
+        this.id =  Project.increaseId();
         this.name = projectName
         this.description = projectDescription
         this.img = projectImg
         this.url = projectURL
         this.ytWalkThrough = youtube
+    }
+    static increaseId (){
+        return this.#id +=1;
     }
 }
 
