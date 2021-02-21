@@ -1,15 +1,11 @@
 import React from 'react'
+import styled from 'styled-components';
 import { SectionConatainer, SectionTitle } from '../Styles'
 import {ProjectList} from './staticPropjects'
 import ProjectCard from './ProjectCard'
 import Breakpoint from '../Styles/sizing'
 
-
-import styled from 'styled-components';
-
-
 const featureProjects = ({Project}) => {
-    console.log(ProjectList)
     return (
         <SectionConatainer>
             <SectionTitle>
@@ -34,5 +30,4 @@ const CardContainer = styled.div`
         grid-template-columns: repeat(3,1fr);
         margin: auto;
     };
-
 `

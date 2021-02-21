@@ -3,12 +3,8 @@ import {Switch, Route} from 'react-router-dom'
 
 import Home from '../Components/Home'
 import Projects from '../Components/projects'
-// import AdminPanel  from '../Components/admin Components/adminPanel'
-// import NewProject from '../Components/admin Components/newProject'
-// import '../Scss/App.scss'
 import ErrorPage from '../Components/ErrorPage'
 import ProjectShow from '../Components/ProjectShow'
-
 
 function Content() {
     return (

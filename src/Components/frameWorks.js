@@ -7,7 +7,6 @@ import sassPNG from '../images/sass-css.png'
 import { SectionConatainer, SectionTitle } from '../Styles'
 import Breakpoint from '../Styles/sizing'
 
-
 function frameWorks() {
     return (
         <SectionConatainer>

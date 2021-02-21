@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import vid from '../Video/codeProcess1.mp4'
 import vid1 from '../Video/codeProcess2.mp4'
-import { Divider, SectionConatainer, SectionTitle } from '../Styles'
+import { SectionConatainer, SectionTitle } from '../Styles'
 import Breakpoint from '../Styles/sizing'
 
 const VideoSection = () => {
@@ -29,7 +29,6 @@ const VideoSection = () => {
                     />
                 </Video>
             </VideoSectionContainer>
-            {/* <Divider/> */}
             <VideoSectionContainer rowTwo={true}>
                 <VideoInfo>
                     <HighLightedH2 bgColor={"rgba(124, 144, 160, 0.35)"}>

@@ -56,6 +56,8 @@ const JsonString = styled.pre`
     line-height:1.7;
     font-size: 14px;
     color: black;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 `
 const NavPadding = styled.div`
     height: 3.5rem;

@@ -1,14 +1,11 @@
-import React, {  } from 'react'
-import {Link} from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react"
+import {Link} from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretSquareUp } from "@fortawesome/free-solid-svg-icons";
-import styled from 'styled-components';
-import { SectionTitle } from '../Styles';
-import Breakpoint from '../Styles/sizing'
+import styled from "styled-components";
+import { SectionTitle } from "../Styles";
+import Breakpoint from "../Styles/sizing"
 
-
-
-// import '../Scss/footer.scss'
 const Footer =()=> {
     return (
         <FooterSection>
@@ -81,9 +78,7 @@ const FooterSection = styled.footer`
     color: white;
 `
 const FooterItem = styled.li`
-
     list-style: none;
-    /* padding: 1rem; */
     a{
         text-decoration: none;
         color: black;
@@ -94,7 +89,7 @@ const FooterItem = styled.li`
 `
 
 const FooterUnorderedList = styled.ul`
-width:400px;
+    width:400px;
     margin:auto;
     grid-template-columns:repeat(4,1fr);
     list-style: none;
@@ -103,4 +98,4 @@ width:400px;
         width: ${props => props.width ? props.width : null};
         display: ${props => props.display ? props.display : "inline"};
     }
-  `
+`

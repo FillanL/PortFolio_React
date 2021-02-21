@@ -2,7 +2,6 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import styled from 'styled-components';
-import breakpoint from '../Styles/sizing';
 import Webmode from './Webmode';
 
 function banner() {

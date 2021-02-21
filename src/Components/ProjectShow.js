@@ -1,7 +1,5 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-// import {Lemede} from '../ProjectImages/Lemede.jpg'
-
 import { ProjectList } from './staticPropjects'
 // to-do
 // remove in line styling to scss file
@@ -43,10 +41,6 @@ const ProjectShow = (props) => {
                     <p style={{ lineHeight: "2" }}>
                         {project.description}
                     <br></br>
-            {/* - <a href={project.url} target="_blank" rel="noopener noreferrer" style={{ "textDecoration": "none", color: "rgba(124, 144, 160, 0.8)" }}>
-                        Link
-            </a> */}
-            
                         </p>
                         <span>
 

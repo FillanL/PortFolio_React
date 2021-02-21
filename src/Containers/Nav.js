@@ -1,9 +1,8 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { SectionTitle } from '../Styles';
-import Breakpoint from '../Styles/sizing'
+import React,{useState} from "react"
+import { Link } from "react-router-dom"
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Breakpoint from "../Styles/sizing"
 
 export default function Nav() {
     const openNAv={
@@ -12,40 +11,29 @@ export default function Nav() {
     const [state, setstate] = useState(openNAv)
     let hideBar = () => {
         setstate({...openNAv,"close":!state.close})
-        // let navBarItem = document.querySelector('.main-nav ul')
-        // console.log("clicked")
-
-        // if (navBarItem.classList.contains('hidden')) {
-        //     navBarItem.classList.replace('hidden', 'show')
-        // } else {
-        //     navBarItem.classList.replace('show', 'hidden') ||
-        //         navBarItem.classList.add('hidden')
-        // }
-
     }
-
 
     return (
         <NavSection>
             <Holder>
-                <FontAwesomeIcon onClick={()=>hideBar()} icon={['fa', 'bars']} size="2x" />
+                <FontAwesomeIcon onClick={()=>hideBar()} icon={["fa", "bars"]} size="2x" />
                 <NavSectionTitle>
-                    {'//'} Fillan
+                    {"//"} Fillan
                 </NavSectionTitle>
             </Holder>
             <UnorderedList hidden={state.close}>
                 <NavItem>
-                    <Link to='/'>
+                    <Link to="/">
                         Home
                     </Link>
                 </NavItem>
                 <NavItem>
-                    <Link to='/projects'>
+                    <Link to="/projects">
                         Projects
                     </Link>
                 </NavItem>
                 <NavItem>
-                    <Link to='/contact'>
+                    <Link to="/contact">
                         Contact
                     </Link>
                 </NavItem>
@@ -56,7 +44,7 @@ export default function Nav() {
 const NavSection = styled.nav`
     display: grid;
     grid-template-columns: 1fr;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     z-index: 99999;
     position: fixed;
     background-color: rgb(255, 255, 255);
@@ -100,7 +88,6 @@ const UnorderedList = styled.ul`
 const Holder= styled.div`
     display:grid;
     grid-template-columns: 5% 95%;
-    /* text-align:center */
     svg{
         padding-top: 8px;
         color: rgb(124, 144, 160);

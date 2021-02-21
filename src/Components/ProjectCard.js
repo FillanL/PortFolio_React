@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Breakpoint from '../Styles/sizing'
-import { Divider } from '../Styles'
-
 
 const ProjectCard = ({ProjectInfo}) => {
     return (
@@ -32,7 +30,6 @@ const ProjectCard = ({ProjectInfo}) => {
                     }
                 </span>
             </DescriptionSection>
-            {/* <Divider/> */}
         </ProjectCardContainer>
     )
 }
