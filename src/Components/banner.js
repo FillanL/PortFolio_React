@@ -50,6 +50,7 @@ const Banner = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1% 64% 35%;
     box-shadow: 2px 2px 8px rgba(99, 99, 99, 0.788);
+    min-height: 400px;
 `
 const SocialMediaContainer = styled.div`
     padding: 5px 0;
