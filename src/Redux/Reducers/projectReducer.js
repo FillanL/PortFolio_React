@@ -1,6 +1,6 @@
 import Actions from "../Actions";
 const initialState = {
-    projects: null
+    allProjects: null
 };
 
 export default function projectReducer(state = initialState, action) {
@@ -8,7 +8,7 @@ export default function projectReducer(state = initialState, action) {
         case Actions.getProjects:
             return {
                 ...state,
-                projects: action.payload
+                allProjects: action.payload
             };
         case Actions.updateProject:
             return {

@@ -5,9 +5,10 @@ import Banner from './banner'
 import JsonStyling from './JsonStyling'
 import VideoSection from './VideoSection';
 import FeatureProjects from './featureProjects';
+import { useSelector } from 'react-redux'
 
 const Home =()=> {
-    const styleMode = localStorage.getItem("styleMode") ? localStorage.getItem("styleMode") : null; 
+    const styleMode = useSelector(state => state.general.webStyle)
     return (
         styleMode === "jsonn" ?
         <JsonStyling/>
