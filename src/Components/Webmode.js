@@ -11,13 +11,12 @@ const Webmode = ({view}) =>{
     const initalMode = styleMode ?? STYLEDView
     dispatch({type:"style", payload: initalMode })
     const [mode, setMode] = useState(initalMode)
-    const webStyle = useSelector(state => state.general.webStyle)
+    // const webStyle = useSelector(state => state.general.webStyle)
     const handleViewSelection = (view) =>{
         setMode(view)
         localStorage.setItem("styleMode", view)
         dispatch({type:"style", payload: view })
     }
-    console.log(webStyle)
     return (
         <WebsiteMode>
             <ViewButtonContainer>
