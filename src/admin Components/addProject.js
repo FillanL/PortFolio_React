@@ -1,7 +1,57 @@
-import React from 'react'
+import React, {useState} from "react"
 import styled from "styled-components"
+import ProjectServices from "../Services/projectServices";
 
-const addProject = () => {
+const AddProject = () => {
+    const isHtml = (url) =>{
+        const urlLength = url.length
+        const dotCom = url.substring(urlLength-4,urlLength)
+        const http = url.substring(0,7)
+
+        if(dotCom === ".com" && http === "http://") return true
+        return false
+    }
+    const isEmpty = () =>{
+        const empty = newProject.project_name === ""|| 
+        newProject.project_description === "" || 
+        newProject.image_url === "" || 
+        newProject.project_url === "" || 
+        newProject.github_url === "" || 
+        newProject.youtube_url === "";
+        if(empty) return true
+        return false
+    }
+    const initialState ={
+        project_name:"", 
+        project_description:"", 
+        image_url:"", 
+        project_url:"", 
+        github_url:"", 
+        youtube_url:""
+    }
+    const errorState ={
+        error:false,
+        message:""
+    }
+    const handleProjectChange=(e)=>{
+        setnewProject({...newProject, [e.target.name]: e.target.value })
+    }
+    const handleSetError=(message)=>{
+        setError({error: true, message})
+    }
+    const handleFormSubmit = async(e) =>{
+        e.preventDefault();
+
+        if(isEmpty())return handleSetError("emply feilds")
+        if(!!!isHtml(newProject.image_url)) return handleSetError( "error img")
+        if(!!!isHtml(newProject.project_url)) return handleSetError("error prj")
+        if(!!!isHtml(newProject.github_url)) return handleSetError( "error github")
+        if(!!!isHtml(newProject.youtube_url)) return handleSetError( "error yt")
+        await ProjectServices.createProject(newProject);
+    }
+    const [newProject, setnewProject] = useState(initialState)
+    const [error, setError] = useState(errorState)
+
     return (
         <div>
             {/* <TextHolder> */}
@@ -9,16 +59,17 @@ const addProject = () => {
                     Create New Project
                 </FormTitle>
             {/* </TextHolder> */}
+            {error ? error.message : null}
             <TextHolder>
                 <FormLabel htmlFor={"username"}>
                     Project name
                 </FormLabel>
                 <TextField 
-                    name={"projectName"}
+                    name={"project_name"}
                     type="text"
                     placeholder={"Ex. Minimal Logic"}
-                    // value={user.password}
-                    // onChange={(e)=>handleUserChanges(e)}
+                    value={newProject.project_name}
+                    onChange={(e)=>handleProjectChange(e)}
                 />
             </TextHolder>
             <TextHolder>
@@ -26,11 +77,11 @@ const addProject = () => {
                     Project Description
                 </FormLabel>
                 <TextField 
-                    name={"projectDescription"}
+                    name={"project_description"}
                     type="text"
                     placeholder={"what was the project about"}
-                    // value={user.password}
-                    // onChange={(e)=>handleUserChanges(e)}
+                    value={newProject.project_description}
+                    onChange={(e)=>handleProjectChange(e)}
                 />
             </TextHolder>
             <TextHolder>
@@ -38,11 +89,11 @@ const addProject = () => {
                     Image Url
                 </FormLabel>
                 <TextField 
-                    name={"imageUrl"}
+                    name={"image_url"}
                     type="text"
                     placeholder={"Ex. unsplash.com/.../"}
-                    // value={user.password}
-                    // onChange={(e)=>handleUserChanges(e)}
+                    value={newProject.image_url}
+                    onChange={(e)=>handleProjectChange(e)}
                 />
             </TextHolder>
             <TextHolder>
@@ -50,11 +101,11 @@ const addProject = () => {
                     Project Url
                 </FormLabel>
                 <TextField 
-                    name={"projectUrl"}
+                    name={"project_url"}
                     type="text"
                     placeholder={"Ex. pject.com/.../..."}
-                    // value={user.password}
-                    // onChange={(e)=>handleUserChanges(e)}
+                    value={newProject.project_url}
+                    onChange={(e)=>handleProjectChange(e)}
                 />
             </TextHolder>
             <TextHolder>
@@ -62,11 +113,11 @@ const addProject = () => {
                     Github Url
                 </FormLabel>
                 <TextField 
-                    name={"githubUrl"}
+                    name={"github_url"}
                     type="text"
                     placeholder={"Ex. github.com/.../..."}
-                    // value={user.password}
-                    // onChange={(e)=>handleUserChanges(e)}
+                    value={newProject.github_url}
+                    onChange={(e)=>handleProjectChange(e)}
                 />
             </TextHolder>
             <TextHolder>
@@ -74,15 +125,15 @@ const addProject = () => {
                 youtube_url
                 </FormLabel>
                 <TextField 
-                    name={"youtubeUrl"}
+                    name={"youtube_url"}
                     type="text"
                     placeholder={"Ex. youtube.com/.../..."}
-                    // value={user.password}
-                    // onChange={(e)=>handleUserChanges(e)}
+                    value={newProject.youtube_url}
+                    onChange={(e)=>handleProjectChange(e)}
                 />
             </TextHolder>
             <TextHolder>
-                <Button hover={"true"} margin={"20px auto"} width={"30%"}>
+                <Button hover={"true"} margin={"20px auto"} width={"30%"} onClick={(e)=>handleFormSubmit(e)}>
                     Submit
                 </Button>
             </TextHolder>
@@ -90,12 +141,12 @@ const addProject = () => {
     )
 }
 
-export default addProject
+export default AddProject
 
 const TextField = styled.input`
     width: ${props => props.width ? props.width : "65%"};
     height: ${props => props.height ? props.height : "1.7rem"};
-    border: 1px solid ${props => props.borderColor ? props.borderColor : '#8e9aaf' };
+    border: 1px solid ${props => props.borderColor ? props.borderColor : "#8e9aaf" };
     outline: ${props => props.error ? null : "none"};
     border-radius: 7px;
     font-size: 0.95rem;
@@ -103,9 +154,9 @@ const TextField = styled.input`
     margin: auto;
 `
 const Button = styled.button`
-    background: ${props => props.color ? props.color : 'transparent' };
-    color: ${props => props.theme === 'dark' ? '#8e9aaf' : '#8e9aaf' };
-    border: 1px solid ${props => props.theme === 'dark' ? '#8e9aaf' : '#8e9aaf' };
+    background: ${props => props.color ? props.color : "transparent" };
+    color: ${props => props.theme === "dark" ? "#8e9aaf" : "#8e9aaf" };
+    border: 1px solid ${props => props.theme === "dark" ? "#8e9aaf" : "#8e9aaf" };
     width:  ${props => props.width ? props.width : null };
     border-radius: 10px;
     margin: 0.5em 0.5em;
@@ -128,7 +179,7 @@ const Form = styled.form`
     height: ${props => props.height ? props.height : null};
     width: ${props => props.width ? props.width : null};
     padding: ${props => props.padding ? props.padding : null};
-    border: 1px solid ${props => props.theme === 'dark' ? '#8e9aaf' : '#343a40' };
+    border: 1px solid ${props => props.theme === "dark" ? "#8e9aaf" : "#343a40" };
     margin: auto;
     border-radius:5px;
 `
