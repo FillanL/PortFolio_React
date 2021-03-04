@@ -1,52 +1,67 @@
-import React,{useState} from 'react'
-import { Redirect } from 'react-router-dom'
-import styled from 'styled-components'
+import React,{useState} from "react";
+import { Redirect, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
+import Auth from "../Services/authServices";
+import breakpoint from "../Styles/sizing"
 
 
 const Login = () => {
-    const isloggedin = true
+    const isloggedin = useSelector(state => state.user.isLoggedIn )
+    const dispatch = useDispatch()
+    const history = useHistory()
     
-    const handleSignin=(e)=>{
-        e.preventDefault();
-    }
     const handleUserChanges = (e)=>{
         setUser({...user, [e.target.name]: e.target.value })
     }
-    const handleFormSubmit = (e)=>{
-        
+    const handleSetErrors = (message, bool=true)=>{
+        setError({...error, message: message, bool: bool})
+    }
+    const handleFormSubmit = async(e)=>{
+        e.preventDefault();
+        handleSetErrors(initialErrorState.message, initialErrorState.bool)
+        if(user.usernameOrEmail.length < 4 && user.password.length < 4)return handleSetErrors("less than 4 chars")
+        else {
+            dispatch(Auth.signInUser(user, history))
+            // setUser(initialUserState)
+        }
     }
     const initialUserState = {
-        email:"",
+        usernameOrEmail:"",
         password:"",
     }
-    const initialMatchingPassword = {
-        rePassword: ""
+    const initialErrorState = {
+        message:"",
+        bool:false,
     }
     const [user, setUser] = useState(initialUserState)
-    console.log("login")
+    const [error, setError] = useState(initialErrorState)
     
     if(isloggedin) return <Redirect to={{pathname: "/admin"}}/>
-
     return (
         <ComponentContainer padding={"10% 0 0 0"} height={"100vh"}>
-            <Form onSubmit={(e)=>handleSignin(e)} bgColor={"#faf9f9"} width="40%" padding={"30px"}>
+            <Form onSubmit={(e)=>handleFormSubmit(e)} bgColor={"#faf9f9"} width="40%" padding={"30px"}>
                 <FormTitle>
                     Sign In
                 </FormTitle>
-
                 <TextHolder>
-                    <FormLabel for={"username"}>
+                    <ErrorMessage>
+                        {error.bool ? error.message : null}
+                    </ErrorMessage>
+                </TextHolder>
+                <TextHolder>
+                    <FormLabel htmlFor={"username"}>
                         Email
                     </FormLabel>
                     <TextField 
-                        name={"email"}
-                        placeholder={"email"} 
-                        value={user.email}
+                        name={"usernameOrEmail"}
+                        placeholder={"Username/Email"} 
+                        value={user.usernameOrEmail}
                         onChange={(e)=>handleUserChanges(e)}
                     />
                 </TextHolder>
                 <TextHolder>
-                    <FormLabel for={"username"}>
+                    <FormLabel htmlFor={"username"}>
                         Password
                     </FormLabel>
                     <TextField 
@@ -69,18 +84,21 @@ const Login = () => {
 export default Login
 
 const ComponentContainer = styled.div`
-    background-color: ${props => props.theme === 'dark' ? '#22223b': '#faf9f9'};
-    color: ${props => props.theme === 'dark' ? '#faf9f9' : '#22223b'};
+    background-color: ${props => props.theme === "dark" ? "#22223b": "#faf9f9"};
+    color: ${props => props.theme === "dark" ? "#faf9f9" : "#22223b"};
     height: 3rem;
     width: 100vw;
     max-width:100vw;
     height: ${props => props.height ? props.height : null};
     padding: ${props => props.padding ? props.padding : "10px"};
 `
+const ErrorMessage =  styled.p`
+    color:red;
+`
 const Button = styled.button`
-    background: ${props => props.color ? props.color : 'transparent' };
-    color: ${props => props.theme === 'dark' ? '#8e9aaf' : '#8e9aaf' };
-    border: 1px solid ${props => props.theme === 'dark' ? '#8e9aaf' : '#8e9aaf' };
+    background: ${props => props.color ? props.color : "transparent" };
+    color: ${props => props.theme === "dark" ? "#8e9aaf" : "#8e9aaf" };
+    border: 1px solid ${props => props.theme === "dark" ? "#8e9aaf" : "#8e9aaf" };
     width:  ${props => props.width ? props.width : null };
     border-radius: 10px;
     margin: 0.5em 0.5em;
@@ -101,16 +119,23 @@ const Form = styled.form`
     grid-template-rows: 1fr;
     background-color: ${props => props.bgColor ? props.bgColor : null};
     height: ${props => props.height ? props.height : null};
-    width: ${props => props.width ? props.width : null};
+    /* width: ${props => props.width ? props.width : null}; */
     padding: ${props => props.padding ? props.padding : null};
-    border: 1px solid ${props => props.theme === 'dark' ? '#8e9aaf' : '#343a40' };
+    border: 1px solid ${props => props.theme === "dark" ? "#8e9aaf" : "#343a40" };
     margin: auto;
     border-radius:5px;
+    width:90%;
+    ${breakpoint.sm}{
+        width: 50%;
+    }; 
+    ${breakpoint.lg}{
+        width: 40%;
+    };
 `
 const TextField = styled.input`
     width: ${props => props.width ? props.width : "65%"};
     height: ${props => props.height ? props.height : "1.7rem"};
-    border: 1px solid ${props => props.borderColor ? props.borderColor : '#8e9aaf' };
+    border: 1px solid ${props => props.borderColor ? props.borderColor : "#8e9aaf" };
     outline: ${props => props.error ? null : "none"};
     border-radius: 7px;
     font-size: 0.95rem;
