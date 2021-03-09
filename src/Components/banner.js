@@ -73,7 +73,6 @@ const JobTitle = styled.p`
 `
 const ProfilePic = styled.img`
     border-radius: 100%;
-    height: 90%;
     width: 210px;
     margin: auto;
 `
